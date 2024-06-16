@@ -1,0 +1,24 @@
+<h4>Listado de Guerreros Z</h4>
+<ul class="list-group">
+  <li
+    *ngFor="let item of warriorList;
+    let i = index;
+    let isEven = even
+    let isLast = last
+    "
+    [ngClass]="{'list-group-item-primary': isEven}"
+    class="list-group-item d-flex justify-content-between align-items-center"
+  >
+  <div>
+    <span class="text-primary">{{i + 1}}. </span>
+    <span>
+      {{item.name}} -
+    </span>
+    <strong>Power:</strong>
+    <span>
+      {{item.power}}
+    </span>
+  </div>
+  <button class="btn btn-danger" (click)="deleteCharacter(item.id!)">X</button>
+  </li>
+</ul>

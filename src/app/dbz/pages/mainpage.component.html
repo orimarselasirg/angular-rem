@@ -1,0 +1,16 @@
+<h1>DBZ App</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <dbz-warriorlist
+      [warriorList]="characters"
+      (emitDeleteCharacter)="deleteCharacter($event)"
+    ></dbz-warriorlist>
+  </div>
+  <div class="col">
+    <dbz-add-character
+      (emitNewCharacter)="createCharacter($event)"
+    ></dbz-add-character>
+  </div>
+</div>
