@@ -11,7 +11,7 @@
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
     "delete:docs": "del docs",
     "copy:dist": "copyfiles dist/first-angular-project/browser/* ./docs -f",
-    "gc":"git add . && git commit -m'build' && git push"
+    "gc":"git add . && git commit -m`${scripts}` && git push"
   },
   "private": true,
   "dependencies": {
